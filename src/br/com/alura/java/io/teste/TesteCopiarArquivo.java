@@ -19,7 +19,7 @@ public class TesteCopiarArquivo {
 		BufferedReader br = new BufferedReader(input);
 		
 		
-		OutputStream fileOutput = new FileOutputStream("novoTeste.txt");
+		OutputStream fileOutput = System.out;
 		OutputStreamWriter output = new OutputStreamWriter(fileOutput);
 		BufferedWriter bw = new BufferedWriter(output);
 		
@@ -29,6 +29,7 @@ public class TesteCopiarArquivo {
 		while(linha != null && !linha.isEmpty()) {			
 			bw.write(linha);	
 			bw.newLine();
+			bw.flush();
 			linha = br.readLine();
 			
 		}
