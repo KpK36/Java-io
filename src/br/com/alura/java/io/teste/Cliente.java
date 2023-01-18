@@ -2,7 +2,7 @@ package br.com.alura.java.io.teste;
 
 import java.io.Serializable;
 
-public class Cliente implements Serializable{
+public class Cliente implements Serializable {
 
 	/**
 	 * 
@@ -11,8 +11,9 @@ public class Cliente implements Serializable{
 	String nome;
 	String profissao;
 	double salario;
-	
-	/** Construtor para inicializar o objeto a partir do nome
+
+	/**
+	 * Construtor para inicializar o objeto a partir do nome
 	 * 
 	 * @param nome
 	 */
@@ -24,32 +25,34 @@ public class Cliente implements Serializable{
 			throw new NullPointerException("O nome nao pode estar branco");
 
 		}
-		
+
 		System.out.println("Cliente criado!\n" + nome);
 
 		this.nome = nome;
 
 	}
-	
-	/** Construtor para inicializar o objeto sem parametros
+
+	/**
+	 * Construtor para inicializar o objeto sem parametros
 	 * 
 	 */
 
 	public Cliente() {
 
 	}
-	
-	
-	/** Metodo para retornar o nome do Cliente
+
+	/**
+	 * Metodo para retornar o nome do Cliente
 	 * 
 	 * @return String
 	 */
 
 	public String getNome() {
-		return this.nome;		
+		return this.nome;
 	}
-	
-	/** Metodo para definir o atributo nome do objeto cliente
+
+	/**
+	 * Metodo para definir o atributo nome do objeto cliente
 	 * 
 	 * @param nome
 	 */
@@ -62,8 +65,9 @@ public class Cliente implements Serializable{
 		this.nome = nome;
 
 	}
-	
-	/** Metodo para retornar o atributo profissao do objeto cliente 
+
+	/**
+	 * Metodo para retornar o atributo profissao do objeto cliente
 	 * 
 	 * @return String
 	 */
@@ -71,12 +75,13 @@ public class Cliente implements Serializable{
 	public String getProfissao() {
 		return this.profissao;
 	}
-	
-	/** Metodo para retornar o atributo salario do objeto cliente 
+
+	/**
+	 * Metodo para retornar o atributo salario do objeto cliente
 	 * 
 	 * @return double
 	 */
-	
+
 	public void setProfissao(String profissao) {
 		this.profissao = profissao;
 	}
@@ -84,8 +89,8 @@ public class Cliente implements Serializable{
 	public double getSalario() {
 		return this.salario;
 	}
-	
-	@Override	
+
+	@Override
 	public String toString() {
 		return "Nome: " + this.nome;
 	}
